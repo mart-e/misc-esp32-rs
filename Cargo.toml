@@ -39,6 +39,10 @@ smoltcp = { version = "0.11.0", default-features = false, features = [
 ] }
 critical-section = "1.2.0"
 bme280 = "0.5.1"
+weact-studio-epd = { version = "0.1.2", features = ["blocking"] }
+embedded-hal-bus = "0.2.0"
+display-interface-spi = "0.5.0"
+embedded-graphics = "0.8.1"
 
 [profile.dev]
 # Rust debug is too slow.
