@@ -37,7 +37,7 @@ fn main() -> ! {
     info!("Hello embedded world!");
     delay.delay(1000.millis());
 
-    log::info!("Intializing SPI Bus...");
+    info!("Intializing SPI Bus...");
 
     let _sclk = peripherals.GPIO18; // clk
     let _mosi = peripherals.GPIO23; // din
@@ -96,13 +96,12 @@ fn main() -> ! {
             .unwrap();
         string_buf.clear();
 
-        // TODO: try fast update?
         driver.full_update(&display).unwrap();
 
         n = n.wrapping_add(1); // Wrap from 0..255
 
-        info!("Sleeping for 20s...");
+        info!("Sleeping for 10s...");
         driver.sleep().unwrap();
-        delay.delay(20_000.millis());
+        delay.delay(10_000.millis());
     }
 }
