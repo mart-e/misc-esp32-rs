@@ -36,7 +36,6 @@ fn main() -> ! {
 
     info!("Hello embedded world!");
     delay.delay(1000.millis());
-    esp_println::logger::init_logger_from_env();
 
     log::info!("Intializing SPI Bus...");
 
